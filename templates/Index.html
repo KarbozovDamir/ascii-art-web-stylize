@@ -4,38 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="/templates/reset.css"> -->
     <link rel="stylesheet" href="/templates/style.css">
     <title>AA-WEB-export</title>
 </head>
 <body>
-    <div class="menu">
-        <form class="control" method="POST" action="/ascii-art/">
-            <h2>ASCII-ART</h2>
-            <div class="areatext">
-                {{ if .Input }}
-                <textarea  style="width:234px;resize: none;" name="input" required placeholder="type something">{{ .Input }}</textarea>
-                {{ else }}
-                <textarea  style="width:234px;resize: none;" name="input" required placeholder="type something"></textarea>
-                {{ end }}
-                <label for="FONTS">choose a font</label>
-        
-                <select name="fs"> 
-                    <option value="standard">Standard</option>
-                    <option value="shadow">Shadow</option>
-                    <option value="thinkertoy">Thinkertoy</option>
+   
+        <div class="menu">
+            <form class="control" method="POST" action="/ascii-art/">
+                <h2>ASCII-ART</h2>
+                <div class="areatext"></div>
+                    {{ if .Input }}
+                    <textarea resize: none;" name="input" required placeholder="type something">{{ .Input }}</textarea>
+                    {{ else }}
+                    <textarea  resize: none;" name="input" required placeholder="type something"></textarea>
+                    {{ end }}
+                    <label for="FONTS">choose a font</label>
+            
+                    <select name="fs"> 
+                        <option value="standard">Standard</option>
+                        <option value="shadow">Shadow</option>
+                        <option value="thinkertoy">Thinkertoy</option>
                     </select>
-            </div>
-            <td>
-                <button name="button" value="submit">Submit</button>
-
-                <button name="button" value="export">Export</button>
-            </td>
-        </form>
-    </div>
-
-    <div class="result">
-        <pre>{{ .Output }}</pre>
-    </div>
+                </div>
+                <td>
+                    <button name="button" value="submit">Submit</button>
+    
+                    <button name="button" value="export">Export</button>
+                </td>
+            </form>
+        </div>
+    
+        <div class="result">
+            <pre>{{ .Output }}</pre>
+        </div>
+ <footer> 2021</footer>
 </body>
 </html>
 
