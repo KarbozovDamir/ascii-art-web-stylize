@@ -92,17 +92,18 @@ font-weight: bold;
 }
 
 .papa {
-  width: 250px;
+  width: 20%;
 color: orangered;
+
 }
 
 .mama {
-  width: 100px;
+  width: 15%;
   color: orchid;
 }
 
 .baby {
-  width: 50px;
+  width: 10%;
 } 
 
 label{
