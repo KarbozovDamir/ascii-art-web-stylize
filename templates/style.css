@@ -1,25 +1,64 @@
 
-body {
-  background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
-  /* background-size: 300% 300%; */
-  /* -webkit-animation: Background 15s ease infinite; */
-  /* animation: Background 35s ease infinite; */
-}
+ html, body { height: 100%; }
+ body {
+   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+   overflow: hidden;
+ }
+ 
+ .ocean { 
+   height: 5%;
+   width:100%;
+   position:absolute;
+   bottom:0;
+   left:0;
+   background: #015871;
+ }
+ 
+ .wave {
+   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+   position: absolute;
+   top: -198px;
+   width: 6400px;
+   height: 198px;
+   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+   transform: translate3d(0, 0, 0);
+ }
+ 
+ .wave:nth-of-type(2) {
+   top: -175px;
+   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+   opacity: 1;
+ }
+ 
+ @keyframes wave {
+   0% {
+     margin-left: 0;
+   }
+   100% {
+     margin-left: -1600px;
+   }
+ }
+ 
+ @keyframes swell {
+   0%, 100% {
+     transform: translate3d(0,-25px,0);
+   }
+   50% {
+     transform: translate3d(0,5px,0);
+   }
+ }
 
 
 .menu{
-    text-align: center;
-background-color:rgb(206, 216, 214);
-      display: block;
-      justify-content: center;
-      /* margin: 85px; */
-      width: 90%;
-      height: 50%;
-    width: 100%;
-    background-color:rgb(206, 216, 214);
+
+    justify-content: center;
+    /* height: 50%;
+    width: 100%; */
+ 
     display: flex;
     justify-content: center;
-
+    width: 100%;
+    min-width: 300px;
     
 }  
 
@@ -29,122 +68,144 @@ background-color:rgb(206, 216, 214);
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  
 }
 
   
-  textarea{
-    resize: none;
-    background-color: antiquewhite;
-    width: 600px;
-    height: 150px;
-    margin: 20px;
-    display: block;
-    justify-content: center;
-  }
+textarea{
+    
+font-size: 20px;
+font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+    /* background-color: #ff6900ff; */
+    background: transparent;
+  
+    /* margin: 10px; */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
 
-.areatext {
-    /* width: auto;
-    height:auto; */
-    box-sizing: border-box;
-  } 
+    /* position: relative;
+    left: 50%;
+    transform: translate(-50%, 0); */
+}
+
+.papa {
+  width: 250px;
+color: orangered;
+}
+
+.mama {
+  width: 100px;
+  color: orchid;
+}
+
+.baby {
+  width: 50px;
+} 
 
 label{
     display: inline;
     margin: auto;
-  }
-  
-  
+
+    /* position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+     */
+    background-color: #B7E8EB;
+    color: rgb(11, 6, 12);
+    border: 1px solid #110a05; 
+    border-radius: 9%;
+    padding: initial;
+    margin: 2%;
+  } 
+
 
 button{
-  display: inline;
-  justify-items: center;
+position: relative;
+left: 51%;
+transform: translate(-50%, 0);
 
-  text-align: center;
-    text-decoration: none;
+background-color:#B7E8EB;
+color: rgb(11, 6, 12);
+border: 1px solid #110a05; 
+border-radius: 25%;
 
-    display: inline;
-
-    font-size: 20px;
+-webkit-transition-duration: 7s; /* Safari */
+    transition-duration:4s;
 }
 
 button:hover {
-        box-shadow: 0 12px 16px 0 rgb(199, 155, 11);
         background-color: #000000;
-        color: white;
+        color: #ace63c;
+        display: inline-block;
 }
 
 
-  
-  .result{
-    width: 100%;
-    color: #f8d50f;
-  }
-
-  pre{
+pre{
       display: block;
-  }
-
-    footer {
-      /* text-align: center; */
-      padding: 3px;
-      background-color: rgb(32, 171, 206);
-      color: white;
-      /* position: absolute; */
-      /* left: 0; */
-      /* bottom: 0; */
-      
-    }
-
-/* .menu{ */
-  /* width: auto;
-  height:auto; */
-  /* color: #e96363; */
-  /* border-right:none; */
-  /* border-bottom:1px solid rgba(0,0,0,.05);
-  box-shadow: inset 0px -2px 10px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box; */
-/* } */
-
-/* @media(max-width: 500px) {
-    .areatext{            
-        background-color: #e96363;
-    }
+      justify-content: center;
+      width: 100%;
+      overflow: auto;
+      color:	rgb(3, 2, 2);
+      background-color: initial;
+      border-bottom: inset;
 }
 
-
-@media(max-width: 550px) {
-    .menu{            
-        background-color: #cdcdcd;
-        width: 400px;
-        height: 400px;
+/* Smartphones (portrait and landscape) ---------- */
+    @media screen and (min-width: 320px) and (max-width: 480px){
+        .menu{
+			background: #7ce7e1;
+      justify-content: center;
+      width: 100%;
+      min-width: 250px;
     }
-}
-
-@media (max-width: 300px) {
-    .menu{
-        width: 150px;
-        height: 1menu {
-    background-color:rgb(206, 216, 214);
-    display: flex;
-    justify-content: center;
-    margin: 85px;
-    width: 90%;
+    }
+    /* Smartphones (portrait) ---------- */
+    @media screen and (max-width: 320px){
+        body{
+			background: #ffd280;
+		}
+    }
+    /* Smartphones (landscape) ---------- */
+    @media screen and (min-width: 321px){
+        body{
+			background: #9ddfbb;
+		}
+    }
+    /* tablets, iPads (portrait and landscape) ---------- */
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+        body{
+			background: #ffb497;
+		}
+    }
+    /* tablets, iPads (portrait) ---------- */
+    @media screen and (min-width: 768px){
+        body{
+			background: #f0e68c;
+		}
+    }
+    /* tablets, iPads (landscape) ---------- */
+    @media screen and (min-width: 1024px){
+        body{
+			background: #d6b3f4;
+		}
+    }
+    /* Desktops and laptops ---------- */
+    @media screen and (min-width: 1224px){
+        body{
+			background: #d8ff9d;
+		}
+    }
+    /* Large screens ---------- */
+    @media screen and (min-width: 1824px){
+        body{
+			background: #ffc0cb;
+		}
+    }
+/* @media only screen and (max-width: 600px) {
+  body {
+    color: green;
   }
-  
-  
-    box-shadow: 0 12px 16px 0 rgb(11, 17, 8);
-    background-color: #f8d50f;
-    color: rgb(0, 0, 0);
-
-    border: 5px rgb(0, 0, 0);
-    border-radius: 35px;
-    
-    
-    /* position: center; */
-    /* box-shadow: 0 12px 16px 0 rgb(245, 200, 3);
-    background-color: #0a0a07e3;
-
-    border: 5px rgb(0, 0, 0);
-    border-radius: 25px; */
-
-  /* } */
+} */

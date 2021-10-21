@@ -8,38 +8,36 @@
     <link rel="stylesheet" href="/templates/style.css">
     <title>AA-WEB-export</title>
 </head>
-<body>
-   
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <body>
         <div class="menu">
+            <div>
+                <img class="papa" src="https://assets.codepen.io/3/kiwi.svg">
+                <img class="mama" src="https://assets.codepen.io/3/kiwi.svg">
+                <img class="baby" src="https://assets.codepen.io/3/kiwi.svg">
+            </div>
             <form class="control" method="POST" action="/ascii-art/">
                 <h2>ASCII-ART</h2>
-                <div class="areatext"></div>
                     {{ if .Input }}
                     <textarea resize: none;" name="input" required placeholder="type something">{{ .Input }}</textarea>
                     {{ else }}
                     <textarea  resize: none;" name="input" required placeholder="type something"></textarea>
                     {{ end }}
-                    <label for="FONTS">choose a font</label>
-            
-                    <select name="fs"> 
-                        <option value="standard">Standard</option>
-                        <option value="shadow">Shadow</option>
-                        <option value="thinkertoy">Thinkertoy</option>
-                    </select>
-                </div>
-                <td>
-                    <button name="button" value="submit">Submit</button>
-    
-                    <button name="button" value="export">Export</button>
-                </td>
+                    <label for="FONTS">FONTS</label>
+                        <select name="fs"> 
+                            <option value="standard">Standard</option>
+                            <option value="shadow">Shadow</option>
+                            <option value="thinkertoy">Thinkertoy</option>
+                        </select>
+        </div>
+            <td class="button">
+                <button name="button" value="submit">Submit</button>
+                <button name="button" value="export">Export</button>
+            </td>
             </form>
-        </div>
-    
-        <div class="result">
-            <pre>{{ .Output }}</pre>
-        </div>
- <footer> 2021</footer>
-</body>
+    <pre>{{ .Output }}</pre>
+    </body>
 </html>
-
-
