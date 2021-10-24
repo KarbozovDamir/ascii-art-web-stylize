@@ -65,12 +65,19 @@
 
 .control {
   display: inline-block;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 10px;
+  position: relative;
+
   
 }
 
+.penguin {
+  width: 2000px;
+  /* height: 40%; */
+  margin: 0 auto;
+}
   
 textarea{
     
@@ -156,31 +163,89 @@ pre{
 
 /* Smartphones (portrait and landscape) ---------- */
     @media screen and (min-width: 320px) and (max-width: 480px){
-        .menu{
+.menu{
 			background: #7ce7e1;
       justify-content: center;
       width: 100%;
       min-width: 250px;
     }
+
+textarea{
+  width: 50%;
+  height: 100px;
+    max-width: 1200px;
+    min-width: 300px;
+}
+    .wave{
+      width: 100%;
+      height: 50px;
     }
-    /* Smartphones (portrait) ---------- */
-    @media screen and (max-width: 320px){
-        body{
+
+    .papa {
+      display: none;
+    }
+    
+    .mama {
+      display: none;
+    }
+    
+    .baby {
+      display: none;
+    } 
+    }
+
+
+    /* Smartphones (portrait) ----------*/
+     @media screen and (max-width: 320px){
+      body{
 			background: #ffd280;
 		}
     }
     /* Smartphones (landscape) ---------- */
-    @media screen and (min-width: 321px){
-        body{
+    @media screen and (min-width: 320px){
+      body{
 			background: #9ddfbb;
 		}
     }
+
     /* tablets, iPads (portrait and landscape) ---------- */
     @media screen and (min-width: 768px) and (max-width: 1024px){
-        body{
+      body{
 			background: #ffb497;
-		}
     }
+    
+    .menu{
+			background: #7ce7e1;
+      justify-content: center;
+      width: 100%;
+      /* min-width:500px; */
+    }
+
+    textarea{
+      width: 55%;
+      height: 100px;
+      max-width: 1200px;
+      min-width: 300px;
+    }
+
+    .papa {
+      width: 20%;
+    color: orangered;
+    
+    }
+    
+    .mama {
+      width: 15%;
+      color: orchid;
+    }
+    
+    .baby {
+      width: 10%;
+    }
+    }
+
+
+
     /* tablets, iPads (portrait) ---------- */
     @media screen and (min-width: 768px){
         body{
@@ -203,10 +268,11 @@ pre{
     @media screen and (min-width: 1824px){
         body{
 			background: #ffc0cb;
-		}
+		} 
     }
-/* @media only screen and (max-width: 600px) {
-  body {
-    color: green;
-  }
-} */
+    @media only screen and (max-width: 600px) {
+      body {
+        color: green;
+      }
+    } 
+
