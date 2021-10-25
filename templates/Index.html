@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Кодировка страницы -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="/templates/reset.css"> -->
-    <link rel="stylesheet" href="/templates/style.css">
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href=".././templates/style.css">
     <title>AA-WEB-export</title>
 </head>
-    <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
+<!-- Тело страницы -->
     <body>
-        <div class="penguin">
-            <img class="papa" src="https://assets.codepen.io/3/kiwi.svg">
-            <img class="mama" src="https://assets.codepen.io/3/kiwi.svg">
-            <img class="baby" src="https://assets.codepen.io/3/kiwi.svg">
-        </div>
-        <div class="menu">
-            <!-- <div>
-                <img class="papa" src="https://assets.codepen.io/3/kiwi.svg">
-                <img class="mama" src="https://assets.codepen.io/3/kiwi.svg">
-                <img class="baby" src="https://assets.codepen.io/3/kiwi.svg">
-            </div> -->
+  <!-- BANNER -->
+<section class="banner">
+    <div class="banner__content">...</div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1280 140"><path d="M0 51.76c36.21-2.25 77.57-3.58 126.42-3.58 320 0 320 57 640 57 271.15 0 312.58-40.91 513.58-53.4V0H0z" fill-opacity=".2"/><path d="M0 24.31c43.46-5.69 94.56-9.25 158.42-9.25 320 0 320 89.24 640 89.24 256.13 0 307.28-57.16 481.58-80V0H0z" fill-opacity=".8"/><path d="M0 0v3.4C28.2 1.6 59.4.59 94.42.59c320 0 320 84.3 640 84.3 285 0 316.17-66.85 545.58-81.49V0z"/></svg>
+</section>
+            <!-- Контент -->
             <form class="control" method="POST" action="/ascii-art/">
-                <h2>ASCII-ART</h2>
                     {{ if .Input }}
                     <textarea resize: none;" name="input" required placeholder="type something">{{ .Input }}</textarea>
                     {{ else }}
                     <textarea  resize: none;" name="input" required placeholder="type something"></textarea>
                     {{ end }}
+
                     <label for="FONTS">FONTS</label>
+
                         <select name="fs"> 
                             <option value="standard">Standard</option>
                             <option value="shadow">Shadow</option>
                             <option value="thinkertoy">Thinkertoy</option>
                         </select>
-        </div>
+        <!-- </div> -->
             <td class="button">
                 <button name="button" value="submit">Submit</button>
                 <button name="button" value="export">Export</button>
             </td>
+
             </form>
+
     <pre>{{ .Output }}</pre>
+
     </body>
+
 </html>
