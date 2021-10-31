@@ -11,9 +11,7 @@
 
 /* style for content without animals ---------- */
 .control{
-    /* justify-content: center; */
     flex-direction: column;
-    /* align-items: center; */
     display: flex;
     min-height: 100%;
     overflow: hidden;
